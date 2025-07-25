@@ -1,15 +1,19 @@
 from flask import Flask, render_template
 import pandas as pd
-import pickle
+#import pickle
 from recommender import get_random_movie, recommend_movies
+from sklearn.metrics.pairwise import cosine_similarity
 
 app = Flask(__name__)
 
 # Load your data
 movie_features = pd.read_pickle('data/movie_features.pkl')
 movies_og = pd.read_pickle('data/movies_og.pkl')
-with open('data/similarity_matrix.pkl', 'rb') as f:
-    similarity_matrix = pickle.load(f)
+#with open('data/similarity_matrix.pkl', 'rb') as f:
+    #similarity_matrix = pickle.load(f)
+
+X = movie_features.drop('MovieID', axis=1)
+similarity_matrix = cosine_similarity(X)
 
 @app.route('/')
 def index():
