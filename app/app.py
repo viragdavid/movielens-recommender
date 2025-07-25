@@ -6,8 +6,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from recommender import get_random_movie, recommend_movies
 
 # Load data
-movie_features = pd.read_pickle('data/movie_features.pkl')
-movies_og = pd.read_pickle('data/movies_og.pkl')
+movie_features = pd.read_pickle('app/data/movie_features.pkl')
+movies_og = pd.read_pickle('app/data/movies_og.pkl')
+
 X = movie_features.drop('MovieID', axis=1)
 similarity_matrix = cosine_similarity(X)
 
