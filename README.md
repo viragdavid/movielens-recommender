@@ -10,31 +10,6 @@ This project explores the MovieLens M1 dataset through extensive analysis, data 
 
 ---
 
-## Project Structure
-
-├── data/
-│ ├── ml-1m-(raw) # The movielens files
-│ ├── zip-to-state # The generated zip to state files
-│ ├── ((several folders too big for git not pushed))
-├── notebooks/
-│ ├── eda.ipynb # Exploratory Data Analysis
-│ ├── data-preparation.ipynb # Dataset merging and preprocessing
-│ ├── hybrid-rating-prediction.ipynb # ML models for rating prediction
-│ ├── recommendation-models.ipynb # Content-based recommenders
-├── eda_reports/
-│ ├── movies_report.html # Auto-generated profiling report
-│ ├── ratings_report.html # Auto-generated profiling report
-│ ├── users_report.html # Auto-generated profiling report
-├── app/
-│ ├── app.py # Streamlit app (recommender demo)
-│ ├── recommender.py # The model runs here
-│ ├── requirements.txt # Streamlit needs it
-│ ├── templates # Folder for the html for the app
-│ ├── data # Folder for the pickle files for the recommender.py contaning data
-
-
----
-
 ## Exploratory Data Analysis (EDA)
 
 The EDA was conducted in the `eda.ipynb` notebook and focused on:
